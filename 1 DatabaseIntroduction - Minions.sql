@@ -47,7 +47,7 @@ ALTER TABLE  [Minions]
 ADD	     [TownId]  INT 	NOT NULL
 GO
 
-ALTER TABLE		[Minions] 
+ALTER TABLE	[Minions] 
 ADD CONSTRAINT  [FK_TownId] FOREIGN KEY ([TownId]) REFERENCES [Towns]([Id])
 
 GO
