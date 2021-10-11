@@ -5,31 +5,31 @@ CREATE DATABASE [Minions]
 
 Go
 
-USE				[Minions]
+USE		[Minions]
 
 Go
 
 	-- Set PK on table creation 
 CREATE TABLE	[Minions]
-				(
-				[Id]	INT			PRIMARY KEY	 NOT NULL,
-				[Name]	NVARCHAR(50)			 NOT NULL,
-				[Age]	INT
-				)
+		(
+		[Id]	INT		PRIMARY KEY	 NOT NULL,
+		[Name]	NVARCHAR(50)			 NOT NULL,
+		[Age]	INT
+		)
 
 Go
 
 	-- Create table and add PK constraint
 CREATE TABLE	[Towns]
-				(
-			--Id is NOT NULL to add later constraint PK, without DROP table
-				[Id]	INT			 NOT NULL,
-				[Name]	NVARCHAR(50),
-				)
+		(
+	--Id is NOT NULL to add later constraint PK, without DROP table
+		[Id]	INT		 NOT NULL,
+		[Name]	NVARCHAR(50),
+		)
 
 GO
 
-ALTER TABLE		[Towns] 
+ALTER TABLE	[Towns] 
 ADD CONSTRAINT	PK_MinionsId PRIMARY KEY (Id)
 
 GO
@@ -38,13 +38,13 @@ GO
 
 --ALTER TABLE - change column to NOT NULL, ADD new column and set FK
 
-ALTER TABLE	 [Towns] 
-ALTER COLUMN [Name]	  NVARCHAR(50) NOT NULL
+ALTER TABLE  [Towns] 
+ALTER COLUMN [Name]	NVARCHAR(50) NOT NULL
 
 GO
 
-ALTER TABLE	[Minions] 
-ADD			[TownId]  INT NOT NULL
+ALTER TABLE  [Minions] 
+ADD	     [TownId]  INT 	NOT NULL
 GO
 
 ALTER TABLE		[Minions] 
